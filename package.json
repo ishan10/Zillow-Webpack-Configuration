@@ -1,0 +1,23 @@
+{
+  "name": "zillow-webpack-configuration",
+  "version": "1.0.0",
+  "description": "This is the Zillow Webpack Boilerplate.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ishan10/Zillow-Webpack-Configuration.git"
+  },
+  "keywords": [
+    "Zillow",
+    "Webpack"
+  ],
+  "author": "Ishan Pandya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ishan10/Zillow-Webpack-Configuration/issues"
+  },
+  "homepage": "https://github.com/ishan10/Zillow-Webpack-Configuration#readme"
+}
