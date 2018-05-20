@@ -39,11 +39,25 @@ const config ={
 				* SCSS
 				**/
 				test: /\.scss$/,
-	            use: [
-	            	MiniCssExtractPlugin.loader,
-					'css-loader', 
-					'sass-loader',
+				use: [
+				MiniCssExtractPlugin.loader,
+				'css-loader', 
+				'sass-loader',
 					],
+			},
+			{
+				/**
+				* Images
+				**/
+				test: /\.(jpeg|jpg|png|gif)$/,
+				use: {
+					loader :'file-loader',
+					options: {
+					name: '[path][name].[ext]',
+					context: ''
+  				}
+				},
+				
 			},
 			]
 		},
