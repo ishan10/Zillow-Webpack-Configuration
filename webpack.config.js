@@ -59,6 +59,19 @@ const config ={
 				},
 				
 			},
+			{
+				/**
+				* SVG
+				**/
+				test: /\.svg$/,
+				use : {
+						loader : 'base64-inline-loader',
+						options : {
+						limit:102400,
+						fallback: 'file-loader'
+					}
+				}
+			}
 			]
 		},
 	mode : __DEV__
