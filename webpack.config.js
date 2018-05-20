@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const __DEV__ = 'development';
 const __PROD__ = 'production';
@@ -13,6 +14,11 @@ const config ={
 		contentBase : path.resolve(__dirname, './src/'),
 		port:4000
 	},
+	plugins: [
+      new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css'
+    })
+    ],
 	module :{
 		rules :[
 			{
@@ -27,6 +33,17 @@ const config ={
 					presets:['es2015', 'stage-0', 'react']
 					}
 				}
+			},
+			{
+				/**
+				* SCSS
+				**/
+				test: /\.scss$/,
+	            use: [
+	            	MiniCssExtractPlugin.loader,
+					'css-loader', 
+					'sass-loader',
+					],
 			},
 			]
 		},
